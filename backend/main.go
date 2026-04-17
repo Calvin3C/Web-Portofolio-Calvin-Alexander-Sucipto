@@ -71,12 +71,6 @@ func main() {
 	// --- Database Setup ---
 	var err error
 
-	// Sesuaikan konfigurasi ini dengan database PostgreSQL Anda!
-	// host = localhost (atau server database Anda)
-	// user = username postgres Anda (biasanya postgres)
-	// password = password postgres Anda
-	// dbname = nama database yang sudah Anda buat
-	// port = port postgres (biasanya 5432)
 	dsn := "host=localhost user=postgres password=December271205 dbname=portofolio_db port=5432 sslmode=disable TimeZone=Asia/Jakarta"
 	db, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
@@ -197,7 +191,6 @@ func loginAdmin(c *gin.Context) {
 		return
 	}
 
-	// Hardcoded credentials
 	if req.Username == "Calvin3c" && req.Password == "December271205" {
 		c.JSON(http.StatusOK, gin.H{"token": "admin-secret-token"})
 	} else {
