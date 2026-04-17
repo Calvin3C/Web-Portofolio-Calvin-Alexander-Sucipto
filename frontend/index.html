@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Calvin Alexander Sucipto — Full-Stack Developer portofolio. Menjelajahi dunia teknologi melalui kode dan kreativitas." />
+  <title>Calvin Alexander Sucipto — Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="navbar-logo">Calvin'sPortofolio<span>.</span></a>
+
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+      </ul>
+
+      <div class="navbar-contact">
+        <a href="#contact" class="btn btn-accent-outline">Contact Me</a>
+        <a href="#" class="btn btn-outline" id="navBtnLogin"
+          style="margin-left: 10px; padding: 10px 24px; font-size: 0.9rem;">Admin Login</a>
+      </div>
+
+      <button class="navbar-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero" id="home">
+    <!-- Background Glows -->
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    <div class="hero-glow-3"></div>
+
+    <div class="container">
+      <!-- Left: Content -->
+      <div class="hero-content">
+        <p class="hero-greeting">
+          <span class="greeting-wave">👋</span> Hello Buds
+        </p>
+        <h1 class="hero-name">I am <span>Calvin Alexander Sucipto</span></h1>
+        <p class="hero-title">Full-Stack Developer & Tech Enthusiast</p>
+        <div class="hero-divider"></div>
+        <p class="hero-bio">
+          I'm a person who has a keen interest in software development and technology.
+          I think presenting clean and efficient code is a matter of concern in
+          developing high-quality applications. To create a great product,
+          I focus on proper architecture and attention to detail in order
+          to make it more professional. For the time being, I'm developing
+          the skill for full-stack web development and exploring new technologies.
+        </p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary" id="downloadCv">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+          <a href="#projects" class="btn btn-outline">
+            More <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Social Bar -->
+        <div class="social-bar">
+          <span>Find Me On</span>
+          <div class="social-icons">
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Visual -->
+      <div class="hero-visual">
+        <div class="profile-wrapper">
+          <div class="profile-blob"></div>
+          <img src="assets/IMG_0952.png" alt="Calvin Alexander Sucipto" class="profile-img" />
+          <div class="deco-plus">+</div>
+          <div class="deco-circle"></div>
+          <div class="deco-dot"></div>
+          <div class="deco-ring"></div>
+          <div class="deco-square"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>About <span>Me</span></h2>
+        <p>Get to know more about who I am and what I do.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <div class="about-img-wrapper">
+            <img src="assets/IMG_0952.png" alt="Calvin Alexander" class="about-photo" />
+            <div class="about-img-border"></div>
+          </div>
+        </div>
+
+        <div class="about-info reveal">
+          <h3 class="about-subtitle">Full-Stack Developer based in Indonesia</h3>
+          <p class="about-text">
+            I am a passionate Full-Stack Developer with a strong foundation in both frontend and backend technologies.
+            I love turning ideas into reality through clean, efficient, and scalable code. My journey in tech started
+            with curiosity and has turned into a full-blown passion for creating meaningful digital experiences.
+          </p>
+          <p class="about-text">
+            Beyond coding, I enjoy exploring new technologies, contributing to open-source projects, and
+            continuously learning to stay ahead in the ever-evolving tech landscape.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-count="10">0</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="5">0</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="3">0</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+          </div>
+
+          <div class="about-skills">
+            <h4>Tech Stack</h4>
+            <div class="skills-tags">
+              <span class="skill-tag"><i class="fab fa-golang"></i> Go</span>
+              <span class="skill-tag"><i class="fab fa-js-square"></i> JavaScript</span>
+              <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+              <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+              <span class="skill-tag"><i class="fab fa-react"></i> React</span>
+              <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+              <span class="skill-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+              <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+              <span class="skill-tag"><i class="fab fa-docker"></i> Docker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS SECTION ============ -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>My <span>Projects</span></h2>
+        <p>A showcase of projects I've built — from web apps to creative experiments.</p>
+        <button class="btn btn-primary btn-add-header" id="btnAddProject" style="display: none;">
+          <i class="fas fa-plus"></i> Add Project
+        </button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Cards rendered dynamically by JS -->
+        <div class="loading-skeleton"></div>
+        <div class="loading-skeleton"></div>
+        <div class="loading-skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATES SECTION ============ -->
+  <section class="certificates" id="certificates">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>My <span>Certificates</span></h2>
+        <p>Credentials and certifications I've earned throughout my learning journey.</p>
+        <button class="btn btn-primary btn-add-header" id="btnAddCertificate" style="display: none;">
+          <i class="fas fa-plus"></i> Add Certificate
+        </button>
+      </div>
+
+      <div class="certificates-grid" id="certificatesGrid">
+        <!-- Cards rendered dynamically by JS -->
+        <div class="loading-skeleton"></div>
+        <div class="loading-skeleton"></div>
+        <div class="loading-skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT SECTION ============ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Get In <span>Touch</span></h2>
+        <p>Have a project in mind or just want to say hello? Feel free to reach out!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p>calvin.alexander@email.com</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <h4>Location</h4>
+              <p>Indonesia</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <p>+62 xxx-xxxx-xxxx</p>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <h4>Follow Me</h4>
+            <div class="social-icons">
+              <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Name</label>
+              <input type="text" id="contactName" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email</label>
+              <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <input type="text" id="contactSubject" name="subject" placeholder="What is this about?" />
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="5" placeholder="Your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#home" class="footer-logo">Calvin<span>.</span></a>
+        <p class="footer-tagline">Building digital experiences with passion and precision.</p>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-text">&copy; 2026 <span>Calvin Alexander Sucipto</span>. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Add Project Modal -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeProjectModal"><i class="fas fa-times"></i></button>
+      <h3 class="modal-title">Add New Project</h3>
+      <form id="addProjectForm">
+        <input type="hidden" id="editProjectId" name="id">
+        <div class="form-group">
+          <label for="projTitle">Title</label>
+          <input type="text" id="projTitle" name="title" required>
+        </div>
+        <div class="form-group">
+          <label for="projDesc">Description</label>
+          <textarea id="projDesc" name="description" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="projTech">Tech Stack (comma separated)</label>
+          <input type="text" id="projTech" name="tech_stack" placeholder="e.g. React, Node.js, CSS">
+        </div>
+        <div class="form-group">
+          <label for="projImg">Image URL</label>
+          <input type="text" id="projImg" name="image_url" placeholder="https://...">
+        </div>
+        <div class="form-group">
+          <label for="projUrl">Project URL</label>
+          <input type="text" id="projUrl" name="project_url" placeholder="https://...">
+        </div>
+        <button type="submit" class="btn btn-primary"
+          style="width: 100%; justify-content: center; margin-top: 10px;">Save Project</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Add/Edit Certificate Modal -->
+  <div class="modal-overlay" id="certModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeCertModal"><i class="fas fa-times"></i></button>
+      <h3 class="modal-title">Add Certificate</h3>
+      <form id="addCertForm">
+        <input type="hidden" id="editCertId" name="id">
+        <div class="form-group">
+          <label for="certName">Name</label>
+          <input type="text" id="certName" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="certIssuer">Issuer</label>
+          <input type="text" id="certIssuer" name="issuer" required>
+        </div>
+        <div class="form-group">
+          <label for="certDate">Date Earned</label>
+          <input type="text" id="certDate" name="date_earned" placeholder="e.g. March 2026" required>
+        </div>
+        <div class="form-group">
+          <label for="certImg">Image URL</label>
+          <input type="text" id="certImg" name="image_url" placeholder="https://...">
+        </div>
+        <div class="form-group">
+          <label for="certUrl">Credential URL</label>
+          <input type="text" id="certUrl" name="credential_url" placeholder="https://...">
+        </div>
+        <button type="submit" class="btn btn-primary"
+          style="width: 100%; justify-content: center; margin-top: 10px;">Save Certificate</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Login Modal -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal-box" style="max-width: 400px;">
+      <button class="modal-close" id="closeLoginModal"><i class="fas fa-times"></i></button>
+      <h3 class="modal-title">Admin Login</h3>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="loginUser">Username</label>
+          <input type="text" id="loginUser" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="loginPass">Password</label>
+          <input type="password" id="loginPass" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary"
+          style="width: 100%; justify-content: center; margin-top: 10px;">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
