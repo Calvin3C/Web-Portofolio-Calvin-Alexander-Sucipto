@@ -36,13 +36,18 @@ function Certificates({ isAdmin, onOpenAdd, onOpenEdit, refreshTrigger }) {
     <section className="certificates" id="certificates">
       <div className="container">
         <div className="section-header reveal">
-          <h2>My <span>Certificates</span></h2>
-          <p>Credentials and certifications I've earned throughout my learning journey.</p>
-          {isAdmin && (
-            <button className="btn btn-primary btn-add-header" style={{ display: 'inline-flex', marginTop: 16 }} onClick={onOpenAdd}>
-              <i className="fas fa-plus"></i> Add Certificate
-            </button>
-          )}
+          <div>
+            <div className="section-eyebrow"><b>03</b> Credentials</div>
+            <h2>Certificates &amp; <span>learning</span></h2>
+          </div>
+          <div>
+            <p>Credentials and certifications I've earned throughout my learning journey.</p>
+            {isAdmin && (
+              <button className="btn btn-accent-outline btn-add-header" style={{ marginTop: 16 }} onClick={onOpenAdd}>
+                <i className="fas fa-plus"></i> Add Certificate
+              </button>
+            )}
+          </div>
         </div>
 
         <div className="certificates-grid">
@@ -52,6 +57,11 @@ function Certificates({ isAdmin, onOpenAdd, onOpenEdit, refreshTrigger }) {
               <div className="loading-skeleton"></div>
               <div className="loading-skeleton"></div>
             </>
+          ) : certs.length === 0 ? (
+            <div className="empty-state">
+              <i className="fas fa-award"></i>
+              <p>Certificates will appear here soon.</p>
+            </div>
           ) : certs.map(cert => (
             <div className="cert-card reveal" key={cert.id || cert.ID}>
               {isAdmin && (
@@ -64,12 +74,14 @@ function Certificates({ isAdmin, onOpenAdd, onOpenEdit, refreshTrigger }) {
                   </button>
                 </div>
               )}
-              <img
-                src={cert.image_url || cert.ImageURL || 'https://images.unsplash.com/photo-1523050854058-8df90110c476?w=600&q=80'}
-                alt={cert.name || cert.Name}
-                className="cert-card-image"
-                loading="lazy"
-              />
+              <div className="cert-card-image-wrapper">
+                <img
+                  src={cert.image_url || cert.ImageURL || 'https://images.unsplash.com/photo-1523050854058-8df90110c476?w=600&q=80'}
+                  alt={cert.name || cert.Name}
+                  className="cert-card-image"
+                  loading="lazy"
+                />
+              </div>
               <div className="cert-card-body">
                 <h3 className="cert-card-name">{cert.name || cert.Name}</h3>
                 <p className="cert-card-issuer"><i className="fas fa-building"></i> {cert.issuer || cert.Issuer}</p>

@@ -36,13 +36,18 @@ function Projects({ isAdmin, onOpenAdd, onOpenEdit, refreshTrigger }) {
     <section className="projects" id="projects">
       <div className="container">
         <div className="section-header reveal">
-          <h2>My <span>Projects</span></h2>
-          <p>A showcase of projects I've built — from web apps to creative experiments.</p>
-          {isAdmin && (
-            <button className="btn btn-primary btn-add-header" style={{ display: 'inline-flex', marginTop: 16 }} onClick={onOpenAdd}>
-              <i className="fas fa-plus"></i> Add Project
-            </button>
-          )}
+          <div>
+            <div className="section-eyebrow"><b>02</b> Work</div>
+            <h2>Selected <span>projects</span></h2>
+          </div>
+          <div>
+            <p>A showcase of projects I've built — from web apps to creative experiments.</p>
+            {isAdmin && (
+              <button className="btn btn-accent-outline btn-add-header" style={{ marginTop: 16 }} onClick={onOpenAdd}>
+                <i className="fas fa-plus"></i> Add Project
+              </button>
+            )}
+          </div>
         </div>
 
         <div className="projects-grid">
@@ -52,6 +57,11 @@ function Projects({ isAdmin, onOpenAdd, onOpenEdit, refreshTrigger }) {
               <div className="loading-skeleton"></div>
               <div className="loading-skeleton"></div>
             </>
+          ) : projects.length === 0 ? (
+            <div className="empty-state">
+              <i className="fas fa-folder-open"></i>
+              <p>Projects are on their way — check back soon.</p>
+            </div>
           ) : projects.map(proj => (
             <div className="project-card reveal" key={proj.id || proj.ID}>
               {isAdmin && (

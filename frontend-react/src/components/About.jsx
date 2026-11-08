@@ -1,12 +1,20 @@
-
+const HIGHLIGHTS = [
+  { icon: 'fas fa-display', title: 'Frontend', text: 'React.js, Next.js and Tailwind CSS for fast, responsive interfaces.' },
+  { icon: 'fas fa-server', title: 'Backend', text: 'Go with Gin and GORM for clean, reliable APIs.' },
+  { icon: 'fas fa-database', title: 'Databases', text: 'Relational design with PostgreSQL and MySQL.' },
+  { icon: 'fas fa-pen-ruler', title: 'UI/UX', text: 'User-centric design principles in every screen.' },
+];
 
 function About() {
   return (
     <section className="about" id="about">
       <div className="container">
         <div className="section-header reveal">
-          <h2>About <span>Me</span></h2>
-          <p>Get to know more about who I am and what I do.</p>
+          <div>
+            <div className="section-eyebrow"><b>01</b> About</div>
+            <h2>Get to know <span>me</span></h2>
+          </div>
+          <p>Who I am, what I do, and the tools I use to build things.</p>
         </div>
 
         <div className="about-grid">
@@ -18,15 +26,25 @@ function About() {
           </div>
 
           <div className="about-info reveal">
-            <h3 className="about-subtitle">Full-Stack Developer based in Indonesia</h3>
-            <p className="about-text" style={{ textAlign: 'justify' }}>
+            <h3 className="about-subtitle">
+              Full-Stack Developer based in <span className="serif">Indonesia</span>
+            </h3>
+            <p className="about-text">
               I am a passionate Full-Stack Developer with a primary focus on creating immersive, responsive, and visually polished frontend experiences using React.js, Next.js, and Tailwind CSS.
             </p>
-            <p className="about-text" style={{ textAlign: 'justify' }}>
+            <p className="about-text">
               While my core expertise lies in frontend development, I also bring a solid foundation in backend architecture using Go (Gin, GORM) and relational database design (PostgreSQL), allowing me to understand and contribute across the entire stack with confidence.
             </p>
 
-
+            <div className="about-highlights">
+              {HIGHLIGHTS.map((h) => (
+                <div className="highlight-card" key={h.title}>
+                  <i className={h.icon}></i>
+                  <h4>{h.title}</h4>
+                  <p>{h.text}</p>
+                </div>
+              ))}
+            </div>
 
             <div className="about-skills">
               <h4>Tech Stack</h4>

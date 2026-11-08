@@ -10,7 +10,7 @@ import Modals from './components/Modals';
 import { getAuthToken } from './api';
 
 function App() {
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(() => !!getAuthToken());
 
   // Modal States
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -20,30 +20,39 @@ function App() {
   // Update lists when modals close with success
   const [refreshTrigger, setRefreshTrigger] = useState(0);
 
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  // Scroll-reveal: observe every .reveal element, including ones rendered
+  // later (e.g. project/certificate cards that arrive from the API).
   useEffect(() => {
-    if (refreshTrigger === 0) {
-      setIsAdmin(!!getAuthToken());
-    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), index * 80);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
 
-    // Wait a moment for React to finish rendering API data before observing
-    const timer = setTimeout(() => {
-      const revealElements = document.querySelectorAll('.reveal:not(.visible)');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add('visible');
-            }, index * 80);
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+    const observeAll = () => {
+      document.querySelectorAll('.reveal:not(.visible)').forEach((el) => io.observe(el));
+    };
+    observeAll();
 
-      revealElements.forEach(el => observer.observe(el));
-    }, 300);
+    const mo = new MutationObserver(observeAll);
+    mo.observe(document.getElementById('root'), { childList: true, subtree: true });
 
-    return () => clearTimeout(timer);
-  }, [refreshTrigger]); // re-run reveal observer when new items are added
+    return () => {
+      io.disconnect();
+      mo.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    const onScroll = () => setShowBackToTop(window.scrollY > 600);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const handleAuthChange = (status) => {
     setIsAdmin(status);
@@ -77,9 +86,8 @@ function App() {
       <Contact />
       <Footer />
 
-      <button className="back-to-top" id="backToTop" aria-label="Back to top"
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        style={{ display: 'flex', PlaceItems: 'center', justifyContent: 'center' }}>
+      <button className={`back-to-top ${showBackToTop ? 'visible' : ''}`} id="backToTop" aria-label="Back to top"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
         <i className="fas fa-chevron-up"></i>
       </button>
 
