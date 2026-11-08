@@ -5,7 +5,7 @@ function Contact() {
         <div className="contact-card reveal">
           <div className="contact-cta">
             <div className="section-eyebrow"><b>04</b> Contact</div>
-            <h2>Let's build something <span className="serif">together</span></h2>
+            <h2>Let's build something <span className="accent">together</span></h2>
             <p>Have a project in mind or just want to say hello? Feel free to reach out!</p>
             <div className="hero-buttons">
               <a href="mailto:calvinsucipto711@gmail.com" className="btn btn-primary">

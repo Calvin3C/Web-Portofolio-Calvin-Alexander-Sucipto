@@ -27,7 +27,7 @@ function About() {
 
           <div className="about-info reveal">
             <h3 className="about-subtitle">
-              Full-Stack Developer based in <span className="serif">Indonesia</span>
+              Full-Stack Developer based in <span className="accent">Indonesia</span>
             </h3>
             <p className="about-text">
               I am a passionate Full-Stack Developer with a primary focus on creating immersive, responsive, and visually polished frontend experiences using React.js, Next.js, and Tailwind CSS.

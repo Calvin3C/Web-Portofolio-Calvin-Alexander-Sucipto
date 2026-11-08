@@ -15,7 +15,7 @@ function Hero() {
             <span className="greeting-wave">👋</span> Hello everyone, I am
           </p>
           <h1 className="hero-name">
-            Calvin Alexander <span className="serif">Sucipto</span>
+            Calvin Alexander <span className="name-accent">Sucipto</span>
           </h1>
           <p className="hero-title">
             Full-Stack Developer

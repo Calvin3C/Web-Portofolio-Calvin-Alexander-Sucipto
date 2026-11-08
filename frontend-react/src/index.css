@@ -192,15 +192,10 @@ img {
 }
 
 .section-header h2 span {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.01em;
   background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  padding-right: 0.08em;
 }
 
 .section-header p {
@@ -555,9 +550,7 @@ img {
   margin-bottom: 26px;
 }
 
-.hero-name .serif {
-  display: inline-block;
-  font-size: 1.06em;
+.hero-name .name-accent {
   background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -837,7 +830,7 @@ img {
   margin-bottom: 22px;
 }
 
-.about-subtitle .serif {
+.about-subtitle .accent {
   color: var(--accent-light);
 }
 
@@ -1165,12 +1158,11 @@ img {
   margin-bottom: 20px;
 }
 
-.contact-cta h2 .serif {
+.contact-cta h2 .accent {
   background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  padding-right: 0.08em;
 }
 
 .contact-cta p {
